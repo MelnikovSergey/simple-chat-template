@@ -6,11 +6,11 @@
 	<link rel="stylesheet" href="css/simple-chat-template.css">
 </head>
 <body>
-	<h1>Файлы и папки:</h1>
+	<h1>Шаблон простой чат комнаты:</h1>
 	<form action="">
-		<input type="text" name="username" placeholder="Введите ваше имя">
-		<textarea name="comment" cols="30" rows="5" placeholder="Ваш комментарий"></textarea>
-		<input type="submit">		
+		<input type="text" name="username" placeholder="Введите ваше имя" required>
+		<textarea name="comment" cols="30" rows="5" placeholder="Ваш комментарий" required></textarea>
+		<input type="submit" value="Отправить">		
 	</form>
 </body>
 </html>
