@@ -5,6 +5,7 @@
 }
 
 body {
+	margin: 8px; 
 	color: grey;
 	font-size: 18px;
 	font-family: Arial;
@@ -15,11 +16,38 @@ h1 {
 	font-weight: 200;
 }
 
-input, textarea {
-	width: 300px;
-}
-
 form {
 	display: flex;
 	flex-direction: column;
+}
+
+input, textarea {
+	width: 300px;
+	margin: 6px;
+	font-size: 14px;
+	font-family: Arial;
+	padding: 12px 20px;	
+	border: 2px solid #ccc;	
+}
+
+textarea {
+    height: 150px;
+    padding: 12px 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+}
+
+input[type="submit"] {
+	color: grey;
+	font-weight: 600;
+	border-radius: 6px;
+	background-color: #f8f8f8;
+	transition: .5s;
+}
+
+input[type="submit"]:hover {
+	color: white;	
+	background-color: #008CBA;
+	border-color: transparent;
 }
