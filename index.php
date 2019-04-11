@@ -12,5 +12,11 @@
 		<textarea name="comment" cols="30" rows="5" placeholder="Ваш комментарий" required></textarea>
 		<input type="submit" value="Отправить">		
 	</form>
+
+	<hr class="custom-style">
+
+	<h2>Оставленные сообщения:</h2>
+	<p>Пока ничего нет :(</p>
+
 </body>
 </html>
