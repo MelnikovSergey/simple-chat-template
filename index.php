@@ -7,6 +7,7 @@
 		$comment = $_POST['comment'];
 		$date = date('Y-m-d H:i:s');
 		$query = $connect -> query("INSERT INTO simple_chat.comments (username, comment, date) VALUES ('$username', '$comment', '$date')");
+
 	}
 ?>
 
@@ -25,21 +26,36 @@
 		<input type="submit" value="Отправить">		
 	</form>
 
+<?php
+		if ($query) {
+			echo "<p>Запись успешно сохранена в БД</p>";
+		} else {
+			echo "<pre>";
+			var_dump($connect -> errorInfo());
+			echo "</pre>";
+		}
+?>		
+
 	<hr class="custom-style">
 
 	<h2>Оставленные сообщения:</h2>
-	<!-- <p>Пока ничего нет :(</p> -->
 
 <?php
 
-	$comments = $connect -> query("SELECT * FROM simple_chat.comments ORDER BY date");
+	$comments = $connect -> query("SELECT * FROM simple_chat.comments ORDER BY date DESC");
 	$comments = $comments -> fetchAll(PDO::FETCH_ASSOC);
+
+	if ($comments) {
 
 	foreach ($comments as $comment) {
 ?>
-		<p><?=$comment['date'] . ' ' . $comment['username'] . ' ' . $comment['comment']?></p>
+		<p><?="{$comment['date']} {$comment['username']} оставил(а) комментарий '{$comment['comment']}'"?></p>
 
- <? } ?>	
+ <? }} else {?>	
+
+	 	<p>Пока ничего нет :(</p>
+
+ <? } ?>
 
 </body>
 </html>
