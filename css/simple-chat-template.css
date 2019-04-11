@@ -11,9 +11,13 @@ body {
 	font-family: Arial;
 }
 
-h1 {
+h1, h2 {
 	font-size: 24px;
 	font-weight: 200;
+}
+
+p {
+	font-size: 14px; 
 }
 
 form {
@@ -26,8 +30,8 @@ input, textarea {
 	margin: 6px;
 	font-size: 14px;
 	font-family: Arial;
-	padding: 12px 20px;	
-	border: 2px solid #ccc;	
+        padding: 12px 20px;	
+        border: 2px solid #ccc;	
 }
 
 textarea {
@@ -50,4 +54,11 @@ input[type="submit"]:hover {
 	color: white;	
 	background-color: #008CBA;
 	border-color: transparent;
+}
+
+hr.custom-style {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
